@@ -17,7 +17,7 @@ Seconds_excess = int(new_seconds % 60)  # Остаток секунд после
 Minutes_excess = int(Seconds_Minutes % 60)  # Остаток минут после выделения целых часов
 Hours = int(Seconds_Minutes / 60)  # Количество часов
 
-print(f"{Hours:02d}" + ":" + f"{Seconds_excess:02d}" + ":" + f"{Minutes_excess:02d}")
+print(f"{Hours:02d}" + ":" + f"{Minutes_excess:02d}" + ":" + f"{Seconds_excess:02d}")
 
 """Начало Задание 3 3. Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn. Например, пользователь ввёл 
 число 3. Считаем 3 + 33 + 333 = 369. """
