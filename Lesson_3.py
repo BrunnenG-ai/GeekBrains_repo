@@ -1,4 +1,4 @@
-"""
+
 print("\n Задание №1 \n")
 
 
@@ -83,7 +83,7 @@ while end == False:
 
 else:
     print(f"Сумма равна = {Total}")
-"""
+
 print("\n Задание №6 \n")
 
 Upper_text = ""
