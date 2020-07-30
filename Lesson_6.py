@@ -1,6 +1,6 @@
-"""
 print("Задание №1")
 from time import sleep
+
 
 class TrafficLight:
     __color = "Черный"
@@ -16,12 +16,12 @@ class TrafficLight:
             print("it's yellow!")
             sleep(2)
 
-trafficlight = TrafficLight()
+
+trafficlight = TrafficLigght()
 trafficlight.running()
 
-"""
-"""
 print("Задание №2")
+
 
 class Road:
     def __init__(self, length, width):
@@ -31,11 +31,12 @@ class Road:
     def get_full_profit(self):
         return f"{self._lenght}м * {self._width}м * 25кг * 5см = {(self._lenght * self._width * 25 * 5) / 1000}т"
 
+
 road_check = Road(5000, 20)
 print(road_check.get_full_profit())
-"""
-"""
+
 print("Задания №3")
+
 
 class Worker():
     def __init__(self, name, surname, position, profit, bonus):
@@ -44,19 +45,22 @@ class Worker():
         self.position = position
         self._income = {"profit": profit, "bonus": bonus}
 
+
 class Position(Worker):
     def get_full_name(self):
-        return  f"{self.name} {self.surname}"
+        return f"{self.name} {self.surname}"
+
     def get_full_proffit(self):
         return f"{sum(self._income.values())}"
+
 
 manager = Position("John", "Smith", "General Manager", 500000, 125000)
 print(manager.get_full_name())
 print(manager.position)
 print(manager.get_full_proffit())
-"""
 
 print("Задание №4")
+
 
 class Car:
 
@@ -65,7 +69,7 @@ class Car:
         self.color = color
         self.speed = speed
         self.is_police = is_police
-        print (f"Новая машина : {self.name} (цвет {self.color}) машина полицейская - {self.is_police}")
+        print(f"Новая машина : {self.name} (цвет {self.color}) машина полицейская - {self.is_police}")
 
     def go(self):
         print(f"{self.name}: Машина поехала.")
@@ -77,7 +81,8 @@ class Car:
         print(f'{self.name}: Машина повернула {"направо" if direction == 0 else "налево"} ')
 
     def show_speed(self):
-        return  f'{self.name}: Скорость автомобиля: {self.speed}.'
+        return f'{self.name}: Скорость автомобиля: {self.speed}.'
+
 
 class TownCar(Car):
 
@@ -85,14 +90,17 @@ class TownCar(Car):
         return f'{self.name}: Скорость автомобиля: {self.speed}. Превышение скорости!' \
             if self.speed > 60 else f"{self.name}: Скорость автомобиля {self.speed}"
 
+
 class WorkerCar(Car):
 
     def show_speed(self):
         return f'{self.name}: Скорость автомобиля: {self.speed}. Превышение скорости!' \
             if self.speed > 40 else f"{self.name}: Скорость автомобиля {self.speed}"
 
+
 class SportCar(Car):
     pass
+
 
 class PoliceCar(Car):
 
@@ -131,8 +139,8 @@ town_car.stop()
 print(f'\n Машина {town_car.name} (цвет {town_car.color})')
 print(f' Машина {police_car.name} (цвет {police_car.color}')
 
-
 print("Задание №5")
+
 
 class Stationery:
     def __init__(self, title="Запуск отрисовки"):
@@ -141,17 +149,21 @@ class Stationery:
     def draw(self):
         print(f"Рисую! {self.title}")
 
+
 class Pen(Stationery):
     def draw(self):
         print(f"Рисую! {self.title} ручкой")
+
 
 class Pencil(Stationery):
     def draw(self):
         print(f"Рисую! {self.title} карандашом")
 
+
 class Handle(Stationery):
     def draw(self):
         print(f"Рисую! {self.title} маркером")
+
 
 start = Stationery()
 start.draw()
